@@ -7,9 +7,10 @@ import java.util.Date;
 import br.ce.wcaquino.entidades.Filme;
 import br.ce.wcaquino.entidades.Locacao;
 import br.ce.wcaquino.entidades.Usuario;
+import org.junit.jupiter.api.Test;
 
 public class LocacaoService {
-	
+
 	public Locacao alugarFilme(Usuario usuario, Filme filme) {
 		Locacao locacao = new Locacao();
 		locacao.setFilme(filme);
@@ -28,16 +29,5 @@ public class LocacaoService {
 		return locacao;
 	}
 
-	public static void main(String[] args) {
-		//cenario
-		LocacaoService locacaoService = new LocacaoService();
-		Usuario usuario = new Usuario("Luiz");
-		Filme filme = new Filme("Jurassic Park", 1, 1.0);
-		//acao
-		Locacao locacao = locacaoService.alugarFilme(usuario, filme);
-		//verificacao
-		System.out.println(locacao.getValor());
-		System.out.println(locacao.getDataLocacao());
-		System.out.println(locacao.getDataRetorno());
-	}
+
 }
